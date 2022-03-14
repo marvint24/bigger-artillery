@@ -113,11 +113,6 @@ if settings.startup["bigger-artillery-mod-enable-power-consumption"].value==true
         {filter="name",name="big-artillery-turret"},
         {filter="name",name="man-big-artillery-turret"}
     }
-
-    function test(ev)
-        print("hiii")
-    end
-
     
     --add
     script.on_event(defines.events.on_built_entity,add_powerinterface,filter)
@@ -196,11 +191,13 @@ function selectfunc(ev)
     
     elseif ev.element.name=="bbmanual" then        
         if pcall(function () testobj(selectedbb.name) end) then 
-    
+
+            local rotation=selectedbb.relative_turret_orientation
             local ent=selectedbb.surface.create_entity{name = "man-big-artillery-turret", position = {x= selectedbb.position.x, y = selectedbb.position.y},force = selectedbb.force}
             script.raise_event(defines.events.script_raised_built, {created_entity=ent,entity=ent})                
             movecontent(selectedbb.get_inventory(1),ent.get_inventory(1))
             script.raise_event(defines.events.script_raised_destroy, {entity=selectedbb})
+            ent.relative_turret_orientation=rotation
 
         end
 
@@ -208,11 +205,13 @@ function selectfunc(ev)
       
     elseif ev.element.name=="bbauto" then
         if pcall(function () testobj(selectedbb.name) end) then
-             
+
+            local rotation=selectedbb.relative_turret_orientation
             local ent=selectedbb.surface.create_entity{name = "big-artillery-turret", position = {x= selectedbb.position.x, y = selectedbb.position.y},force = selectedbb.force}
             script.raise_event(defines.events.script_raised_built, {created_entity=ent,entity=ent})                
             movecontent(selectedbb.get_inventory(1),ent.get_inventory(1))
             script.raise_event(defines.events.script_raised_destroy, {entity=selectedbb})
+            ent.relative_turret_orientation=rotation
 
         end
 
@@ -228,5 +227,10 @@ script.on_event(defines.events.on_gui_click,selectfunc)
 
 
 
+-- Tools
+-- print(serpent.block(table))
+-- print(serpent.dump(table))
 
-
+-- function test(ev)
+--     print("hiii")
+-- end
