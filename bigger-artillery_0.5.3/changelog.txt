@@ -1,0 +1,57 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+  Changes:
+    - Fixed a bug with the mod: EndgameCombat
+---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+  Changes:
+    - Added support for translation
+---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+  Changes:
+    - Added hidden item for the Manual Big Bertha (Can be found in the editor)
+---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+  Changes:
+    - Removed custom range color (It's still possible to hide the range)
+    - Added manual mode for the Big Bertha (You can toggle it individually in-game)
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+  Changes:
+    - Added custom settings for the artillery range color on the map
+---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+  Changes:
+    - Fixed crash on deconstruction by robot
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+  Changes:
+    - Balancing update
+    - The Big Bertha uses now power!!! (Can be configured in the mod settings)
+    - Crafting recipe changed
+    - Max health changed
+---------------------------------------------------------------------------------------------------
+Version: 0.3.04
+  Changes:
+    - Deleted unnecessary files for Factorio 1.1
+---------------------------------------------------------------------------------------------------
+Version: 0.3.03
+  Changes:
+    - Deleted unnecessary files for Factorio 1.0
+---------------------------------------------------------------------------------------------------
+Version: 0.3.02
+  Changes:
+    - Added custom mod settings for Factorio 1.1
+---------------------------------------------------------------------------------------------------
+Version: 0.3.01
+  Changes:
+    - Added custom mod settings for Factorio 1.0
+---------------------------------------------------------------------------------------------------
+Version: 0.2.02
+  Changes:
+    - Updated to Factorio 1.1
+---------------------------------------------------------------------------------------------------
+Version: 0.2.01
+  Changes:
+    - Complete overhaul 
+    - Some bug fixes
