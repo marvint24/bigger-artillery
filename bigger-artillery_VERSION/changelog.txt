@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+  Changes:
+    - Fixed script_raised_revive event handler
+    - It is now compatible with the mod: Creative Mod
+---------------------------------------------------------------------------------------------------
 Version: 0.5.4
   Changes:
     - Remembers orientation when switching
