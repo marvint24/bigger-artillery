@@ -37,6 +37,11 @@ if settings.startup["bigger-artillery-mod-enable-power-consumption"].value==true
 
     end
 
+    function revive_bb(a)
+        event={created_entity=a.entity}
+        add_powerinterface(event)
+    end
+
     function rm_powerinterface(a)
         un=a.entity.unit_number
         if global.biggerartillerypowerinterfacetable[un]~=nil then
@@ -118,7 +123,7 @@ if settings.startup["bigger-artillery-mod-enable-power-consumption"].value==true
     script.on_event(defines.events.on_built_entity,add_powerinterface,filter)
     script.on_event(defines.events.on_robot_built_entity,add_powerinterface,filter)
     script.on_event(defines.events.script_raised_built,add_powerinterface,filter)
-    script.on_event(defines.events.script_raised_revive,add_powerinterface,filter)
+    script.on_event(defines.events.script_raised_revive,revive_bb,filter)
     --rm
     script.on_event(defines.events.on_player_mined_entity,rm_powerinterface,filter)
     script.on_event(defines.events.on_robot_mined_entity,rm_powerinterface,filter)
@@ -228,6 +233,7 @@ script.on_event(defines.events.on_gui_click,selectfunc)
 
 
 -- Tools
+-- game.print()
 -- print(serpent.block(table))
 -- print(serpent.dump(table))
 
