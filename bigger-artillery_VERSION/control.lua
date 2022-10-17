@@ -164,13 +164,11 @@ function change_bb(ev)
                 ply.gui.top["bbwindow"].destroy()
             end
             local win=ply.gui.top.add{type="frame",name="bbwindow",direction="vertical",caption={"custom-name.bb-menu-text"}}
-            local flow=win.add{type="flow",name="bbflow",direction="horizontal"}
-            flow.add{type="button",name="bbmanual",caption={"custom-name.bb-menu-manual"}}
-            flow.add{type="button",name="bbauto",caption={"custom-name.bb-menu-auto"}} 
-            local close=win.add{type="button",name="bbclose",caption={"custom-name.bb-menu-close"}}
-            close.style.top_margin=10
-            close.style.horizontal_align="right"
-            close.style.width=57
+            local row1=win.add{type="flow",name="bbflow",direction="horizontal"}
+            row1.add{type="button",name="bbmanual",caption={"custom-name.bb-menu-manual"}}
+            row1.add{type="button",name="bbauto",caption={"custom-name.bb-menu-auto"}} 
+            local row2=win.add{type="flow",name="bbflow2",direction="horizontal"}
+            row2.add{type="button",name="bbclose",caption={"custom-name.bb-menu-close"}}
         end
     end
 end
