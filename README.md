@@ -1,6 +1,6 @@
 ## A mod for the game [Factorio](https://factorio.com)
 
-### [Mod page](https://mods.factorio.com/mod/bigger-artillery)
+#### For more details, please visit my [mod page](https://mods.factorio.com/mod/bigger-artillery).
 
 <br>
 
