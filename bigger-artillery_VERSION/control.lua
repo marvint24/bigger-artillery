@@ -64,14 +64,18 @@ if settings.startup["bigger-artillery-mod-enable-power-consumption"].value==true
         powerinterfacetable=global.biggerartillerypowerinterfacetable
         if (powerinterfacetable ~= nil) then
             for _,enti in pairs(powerinterfacetable) do
-                if enti[1].get_inventory(defines.inventory.turret_ammo).is_empty()==false then
-                    if (enti[2].is_connected_to_electric_network()==true and enti[2].energy==enti[2].electric_buffer_size) then 
-                        enti[1].active=true
-                    else
-                        enti[1].active=false
-                    end
+                if enti[1].valid==false or enti[2].valid==false then
+                    config_changed()
                 else
-                    enti[2].power_usage=10*(50/3)
+                    if enti[1].get_inventory(defines.inventory.turret_ammo).is_empty()==false then
+                        if (enti[2].is_connected_to_electric_network()==true and enti[2].energy==enti[2].electric_buffer_size) then 
+                            enti[1].active=true
+                        else
+                            enti[1].active=false
+                        end
+                    else
+                        enti[2].power_usage=10*(50/3)
+                    end
                 end
             end
         end
@@ -228,7 +232,11 @@ script.on_event(defines.events.on_gui_opened,change_bb)
 script.on_event("close-bb-menu",closegui)
 script.on_event(defines.events.on_gui_click,selectfunc)
 
-
+-- function tableLength(T)
+--     local count = 0
+--     for _ in pairs(T) do count = count + 1 end
+--     return count
+-- end
 
 -- Tools
 -- game.print()
