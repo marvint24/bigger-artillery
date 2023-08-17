@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.8
+  Changes:
+    - Fixed an error that was caused by the mod: Blueprint Sandboxes
+---------------------------------------------------------------------------------------------------
 Version: 0.5.7
   Changes:
     - Added German translation. Credits to SempfgurkeXP2 and tntmasta
