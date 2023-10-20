@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.9
+  Changes:
+    - Made settings to control the ammunition of the Big Bertha visible
+    - Added a translation for the new settings
+---------------------------------------------------------------------------------------------------
 Version: 0.5.8
   Changes:
     - Fixed an error that was caused by the mod: Blueprint Sandboxes
