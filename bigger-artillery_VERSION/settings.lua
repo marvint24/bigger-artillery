@@ -55,7 +55,6 @@ data:extend({
         order = "90",
         name = "bigger-artillery-mod-ammo-stack",
         setting_type = "startup",
-        hidden = true,
         default_value = 50,
         minimum_value = 1,
         maximum_value = 255     
@@ -65,7 +64,6 @@ data:extend({
         order = "90",
         name = "bigger-artillery-mod-inventory-stack",
         setting_type = "startup",
-        hidden = true,
         default_value = 5,
         minimum_value = 1,
         maximum_value = 255     
