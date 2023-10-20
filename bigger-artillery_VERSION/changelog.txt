@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.5.9
+Version: 0.6.0
   Changes:
     - Made settings to control the ammunition of the Big Bertha visible
     - Added a translation for the new settings
