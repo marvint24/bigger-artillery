@@ -1,7 +1,7 @@
 local powerinterface = table.deepcopy(data.raw["electric-energy-interface"]["electric-energy-interface"])
 powerinterface.name="big-artillery-power"
-powerinterface.energy_production="0KW"
-powerinterface.energy_usage="10000KW"
+powerinterface.energy_production="0kW"
+powerinterface.energy_usage="10000kW"
 powerinterface.energy_source = {
   type = "electric",
   usage_priority = "secondary-input",
