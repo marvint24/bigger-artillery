@@ -33,7 +33,7 @@ if settings.startup["bigger-artillery-mod-enable-power-consumption"].value==true
         enti.destructible=false
         enti.operable=false
         enti.rotatable=false
-        global.biggerartillerypowerinterfacetable[e.unit_number] = {e,enti,0}
+        biggerartillerypowerinterfacetable[e.unit_number] = {e,enti,0}
 
     end
 
@@ -44,9 +44,9 @@ if settings.startup["bigger-artillery-mod-enable-power-consumption"].value==true
 
     function rm_powerinterface(a)
         un=a.entity.unit_number
-        if global.biggerartillerypowerinterfacetable[un]~=nil then
-            global.biggerartillerypowerinterfacetable[un][2].destroy()
-            global.biggerartillerypowerinterfacetable[un]=nil
+        if biggerartillerypowerinterfacetable[un]~=nil then
+            biggerartillerypowerinterfacetable[un][2].destroy()
+            biggerartillerypowerinterfacetable[un]=nil
         end
     end
 
@@ -61,7 +61,7 @@ if settings.startup["bigger-artillery-mod-enable-power-consumption"].value==true
 
 
     function check_power(a)
-        powerinterfacetable=global.biggerartillerypowerinterfacetable
+        powerinterfacetable=biggerartillerypowerinterfacetable
         if (powerinterfacetable ~= nil) then
             for _,enti in pairs(powerinterfacetable) do
                 if enti[1].valid==false or enti[2].valid==false then
@@ -83,8 +83,8 @@ if settings.startup["bigger-artillery-mod-enable-power-consumption"].value==true
 
 
     function set_power()
-        powerinterfacetable=global.biggerartillerypowerinterfacetable
-        power=global.biggerartillerypowerinterfacetablepowerusage
+        powerinterfacetable=biggerartillerypowerinterfacetable
+        power=biggerartillerypowerinterfacetablepowerusage
         for _,enti in pairs(powerinterfacetable) do
             if enti[1].get_inventory(defines.inventory.turret_ammo).is_empty()==false then
                 if enti[3]==enti[1].relative_turret_orientation then
@@ -99,8 +99,8 @@ if settings.startup["bigger-artillery-mod-enable-power-consumption"].value==true
 
     function config_changed()
 
-        global.biggerartillerypowerinterfacetable={}
-        global.biggerartillerypowerinterfacetablepowerusage=settings.startup["bigger-artillery-mod-power-consumption"].value*(50/3)
+        biggerartillerypowerinterfacetable={}
+        biggerartillerypowerinterfacetablepowerusage=settings.startup["bigger-artillery-mod-power-consumption"].value*(50/3)
         
         for _, surface in pairs(game.surfaces) do
             for _, pwint in pairs(surface.find_entities_filtered{name="big-artillery-power"}) do
@@ -143,7 +143,7 @@ if settings.startup["bigger-artillery-mod-enable-power-consumption"].value==true
 else
    
     function remove_pw()
-        global.biggerartillerypowerinterfacetable={}
+        biggerartillerypowerinterfacetable={}
         
         for _, surface in pairs(game.surfaces) do
             for _, pwint in pairs(surface.find_entities_filtered{name="big-artillery-power"}) do
@@ -245,4 +245,10 @@ script.on_event(defines.events.on_gui_click,selectfunc)
 
 -- function test(ev)
 --     print("hiii")
+-- end
+
+-- function printTable(table)
+--     for k,v in pairs(table) do
+--         print(k,v)
+--     end
 -- end
