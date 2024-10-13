@@ -1,6 +1,6 @@
-require("bertha")
-require("bertha-entity")
-require("powerinterface")
-require("bertha-manual")
+require("data/bertha")
+require("data/bertha-entity")
+require("data/powerinterface")
+require("data/bertha-manual")
 
 
