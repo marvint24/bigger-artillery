@@ -86,7 +86,12 @@ data:extend{tech}
 
 local gun = table.deepcopy(data.raw["gun"]["artillery-wagon-cannon"])
 gun.name = "big-artillery-wagon-cannon"
-gun.attack_parameters.projectile_creation_parameters= require("__bigger-artillery__/artillery-cannon-muzzle-flash-shifting")
+
+--Scale muzzle-flash-shifting
+for k, v in pairs(gun.attack_parameters.projectile_creation_parameters) do
+  v[2][1]=v[2][1]*2.1
+  v[2][2]=v[2][2]*2.1
+end
 
 data:extend{gun}
 

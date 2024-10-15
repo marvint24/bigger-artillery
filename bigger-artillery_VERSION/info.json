@@ -1,8 +1,8 @@
 {
   "name": "bigger-artillery",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "title": "Bigger Artillery",
   "author": "Mrxmen24",
-  "factorio_version": "1.2",
+  "factorio_version": "2.0",
   "dependencies": ["base"]
 }
