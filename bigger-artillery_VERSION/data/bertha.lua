@@ -44,6 +44,11 @@ recipe.ingredients ={
     name = "low-density-structure", 
     amount = 50,
     type = "item"
+  },
+  {
+    name = "artillery-turret", 
+    amount = 1,
+    type = "item"
   }
 }
 recipe.results = {
