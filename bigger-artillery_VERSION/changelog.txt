@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.2
+  Changes:
+    - Balance update (for Space Age). Changed ingredients and tech. Credits to GHX
+---------------------------------------------------------------------------------------------------
 Version: 0.7.1
   Changes:
     - Made the mod compatible with Factorio 2.0
