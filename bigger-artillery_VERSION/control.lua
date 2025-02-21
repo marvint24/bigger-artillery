@@ -12,10 +12,6 @@ local cloneFilter = {
     { filter = "name", name = "man-big-artillery-turret" }
 }
 
-local guiFilter = {
-    {}
-}
-
 if settings.startup["bigger-artillery-mod-enable-power-consumption"].value == false then
     script.on_init(bmodule.remove_allPowerInterfaces)
     script.on_configuration_changed(bmodule.remove_allPowerInterfaces)

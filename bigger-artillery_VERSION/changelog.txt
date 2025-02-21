@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.4
+  Changes:
+    - Removed unnecessary lines of code. Thank you for noticing leomonta
+---------------------------------------------------------------------------------------------------
+Version: 0.7.3
+  Changes:
+    - Added Chinese translation. Credits to Houraiji-Kyuusyou
+---------------------------------------------------------------------------------------------------
 Version: 0.7.2
   Changes:
     - Balance update (for Space Age). Changed ingredients and tech. Credits to GHX

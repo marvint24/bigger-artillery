@@ -42,8 +42,6 @@ function ui.moveInventory(inv1, inv2)
 end
 
 function ui.selectfunc(ev)
-    print(serpent.dump(ev.element))
-    print("hiiii")
     if ev.element.name == "bbclose" then
         game.players[ev.player_index].gui.top["bbwindow"].destroy()
     elseif ev.element.name == "bbmanual" then
