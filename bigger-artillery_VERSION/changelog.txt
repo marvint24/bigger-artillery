@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+  Changes:
+    - Made the mod compatible with Factorio 2.1
+---------------------------------------------------------------------------------------------------
 Version: 0.7.4
   Changes:
     - Removed unnecessary lines of code. Thank you for noticing leomonta
